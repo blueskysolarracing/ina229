@@ -2,14 +2,12 @@
 
 from setuptools import find_packages, setup
 
-with open('README.rst', 'r') as file:
-    long_description = file.read()
-
 setup(
     name='ina229',
     version='0.0.0.dev0',
-    description='A Python driver for Texas Instruments INA229 85-V, 20-Bit, Ultra-Precise Power/Energy/Charge Monitor With SPI Interface',
-    long_description=long_description,
+    description='A Python driver for Texas Instruments INA229 85-V, 20-Bit, '
+                'Ultra-Precise Power/Energy/Charge Monitor With SPI Interface',
+    long_description=open('README.rst').read(),
     long_description_content_type='text/x-rst',
     url='https://github.com/blueskysolarracing/ina229',
     author='Blue Sky Solar Racing',
@@ -29,18 +27,14 @@ setup(
         'Programming Language :: Python :: 3.11',
         'Programming Language :: Python :: 3.12',
     ],
-    keywords=[
-        'python',
-    ],
+    keywords=['python', 'ina229', 'ti', 'texas instruments'],
     project_urls={
         'Documentation': 'https://ina229.readthedocs.io/en/latest/',
         'Source': 'https://github.com/blueskysolarracing/ina229',
         'Tracker': 'https://github.com/blueskysolarracing/ina229/issues',
     },
     packages=find_packages(),
-    install_requires=[
-         'python-periphery>=2.4.1,<3',
-    ]
+    install_requires=['python-periphery>=2.4.0,<3']
     python_requires='>=3.11',
     package_data={'ina229': ['py.typed']},
 )
